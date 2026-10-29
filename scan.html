@@ -1,0 +1,328 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Track0tic tenant portal — phone scan pages & PDF</title><link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600&family=Noto+Sans+Devanagari:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+html,body{margin:0;background:#dfe4ec;font-family:'Noto Sans',system-ui,sans-serif;color:#0f172a}
+.bar{position:sticky;top:0;z-index:50;height:48px;display:flex;align-items:center;gap:12px;padding:0 16px;background:#0f172a;color:#eef2f8;font-size:13px}
+.bar b{font-weight:600}.bar select{height:32px;border-radius:6px;border:1px solid #7a8696;background:#172036;color:#eef2f8;font-size:13px;max-width:360px}
+.bar a,.bar button{height:32px;padding:0 12px;border-radius:6px;border:1px solid #7a8696;background:#172036;color:#eef2f8;font-size:13px;text-decoration:none;display:inline-flex;align-items:center;cursor:pointer;font-family:inherit}
+.bar .sp{flex-grow:1}.bar .n{color:#a3adbf}
+.screen{display:none}.screen.on{display:block}
+.scan .screen.on{padding:32px 16px}
+#ScanBind a{color:#1a43b8}
+#ScanBind a:hover{color:#1d4ed8}
+#ScanBind .mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
+#ScanBind .pill{display:inline-block;padding:2px 10px;border-radius:9999px;font-size:13px;font-weight:500;white-space:nowrap}
+#BindDone a{color:#1a43b8}
+#BindDone a:hover{color:#1d4ed8}
+#BindDone .mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
+#BindDone .pill{display:inline-block;padding:2px 10px;border-radius:9999px;font-size:13px;font-weight:500;white-space:nowrap}
+#PublicScan a{color:#1a43b8}
+#PublicScan a:hover{color:#1d4ed8}
+#PublicScan .mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
+#PublicScan .pill{display:inline-block;padding:2px 10px;border-radius:9999px;font-size:13px;font-weight:500;white-space:nowrap}
+#DeliveryScan a{color:#1a43b8}
+#DeliveryScan a:hover{color:#1d4ed8}
+#DeliveryScan .mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
+#DeliveryScan .pill{display:inline-block;padding:2px 10px;border-radius:9999px;font-size:13px;font-weight:500;white-space:nowrap}
+#HubBind a{color:#1a43b8}
+#HubBind a:hover{color:#1d4ed8}
+#HubBind .mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
+#HubBind .pill{display:inline-block;padding:2px 10px;border-radius:9999px;font-size:13px;font-weight:500;white-space:nowrap}
+#ReportPDF table{border-collapse:collapse;width:100%;font-size:12px}
+#ReportPDF th{text-align:left;font-weight:500;color:#4b5565;padding:6px 8px;border-bottom:1px solid #e2e6ed}
+#ReportPDF td{padding:6px 8px;border-bottom:1px solid #e2e6ed;vertical-align:top}
+#ReportPDF .mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
+</style></head><body class="scan">
+<div class="bar"><b>Track<span style="color:#e11d2e">0</span>tic™ tenant portal · wireframe review</b><span class="n">·</span><select id="pick"><option value="ScanBind">4.1 Device QR scanned · bind</option><option value="BindDone">4.2 Bound</option><option value="PublicScan">4.3 Passport QR scanned · public</option><option value="DeliveryScan">4.4 Device QR scanned at the stop · Delivered</option><option value="HubBind">4.5 HUB QR scanned · storage</option><option value="ReportPDF">4.6 Compliance report PDF</option></select><button type="button" id="prev">‹ Prev</button><button type="button" id="next">Next ›</button><span class="sp"></span><span class="n" id="pos"></span><a href="index.html">Index</a><a href="portal.html">Portal</a><a href="scan.html">Phone &amp; PDF</a></div>
+<section class="screen" id="ScanBind" data-title="4.1 Device QR scanned · bind"><div style="width: 390px; margin: 0 auto; box-shadow: 0 8px 32px -4px #0f172a33; border-radius: 16px; overflow: hidden; background: #fff"><div style="width: 390px; height: 844px; box-sizing: border-box; background: #ffffff; font-family: 'Noto Sans', system-ui, sans-serif; color: #0f172a; display: flex; flex-direction: column; position: relative; overflow: hidden">
+  <header style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; border-bottom: 1px solid #e2e6ed">
+    <div style="display: flex; flex-direction: column">
+      <span style="font-size: 14px; font-weight: 500">Adroit Agencies · Track<span style="color: #e11d2e">0</span>tic</span>
+      <span style="font-size: 13px; color: #4b5565">Ramesh K · Operator · Supplyman</span>
+    </div>
+    <a href="portal.html#Main" style="font-size: 14px">Sign out</a>
+  </header>
+  <div style="padding: 24px 20px 120px; display: flex; flex-direction: column; gap: 16px; overflow: auto">
+    <div style="display: flex; flex-direction: column; gap: 2px">
+      <span style="font-size: 13px; font-weight: 500; letter-spacing: 0.02em; text-transform: uppercase; color: #4b5565">Device QR scanned</span>
+      <span class="mono" style="font-size: 24px; line-height: 32px; font-weight: 600">TRK-0418</span>
+      <span style="font-size: 15px; color: #4b5565">Pro · 71% · 4.6 °C now · at Okhla warehouse</span>
+    </div>
+    <h1 style="margin: 0; font-size: 28px; line-height: 36px; font-weight: 600">Scan the passport QRs going with this device</h1>
+    <div style="background: #0b1220; color: #ffffff; border-radius: 16px; height: 200px; position: relative; display: flex; align-items: center; justify-content: center">
+      <div style="width: 150px; height: 150px; border: 2px solid #ffffff; border-radius: 16px; opacity: 0.9"></div>
+      <span style="position: absolute; bottom: 12px; font-size: 13px; color: #ffffff">Camera · keep scanning, each new QR is added</span>
+    </div>
+    <div style="display: flex; justify-content: space-between; align-items: baseline">
+      <span style="font-size: 18px; font-weight: 600">Scanned · 24</span>
+      <a href="#ScanBind" style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none; box-sizing: border-box; background: none; border: 0; padding: 0; color: #1a43b8; text-decoration: underline; font-size: 14px; font-family: inherit">Type an id</a>
+    </div>
+    <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px">
+      <li style="display: flex; justify-content: space-between; align-items: center; padding: 10px 12px; border: 1px solid #e2e6ed; border-radius: 12px"><span class="mono" style="font-size: 15px">PP-AD-011234</span><span class="pill" style="background: #eef1f6; color: #4b5565">from HUB TRK-0401</span></li>
+      <li style="display: flex; justify-content: space-between; align-items: center; padding: 10px 12px; border: 1px solid #e2e6ed; border-radius: 12px"><span class="mono" style="font-size: 15px">PP-AD-011235</span><span class="pill" style="background: #eef1f6; color: #4b5565">from HUB TRK-0401</span></li>
+      <li style="display: flex; justify-content: space-between; align-items: center; padding: 10px 12px; border: 1px solid #e2e6ed; border-radius: 12px; background: #fef3e2"><span class="mono" style="font-size: 15px">PP-SP-440019</span><span class="pill" style="background: #b45309; color: #ffffff">bound elsewhere · will move</span></li>
+      <li style="display: flex; justify-content: space-between; align-items: center; padding: 10px 12px; border: 1px solid #e2e6ed; border-radius: 12px; background: #eef1f6"><span class="mono" style="font-size: 15px; color: #4b5565">PP-AD-011234</span><span class="pill" style="background: #eef1f6; color: #4b5565">duplicate · ignored</span></li>
+      <li style="font-size: 14px; color: #4b5565; padding: 4px 12px">+ 20 more</li>
+    </ul>
+    <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 500">Going to (optional)
+      <select style="height: 56px; border: 1px solid #7a8696; border-radius: 8px; padding: 0 12px; font-size: 17px; font-family: inherit; background: #ffffff"><option>Apollo Pharmacy, Saket</option><option>Max Hospital, Patparganj</option><option>Route 7 (9 stops)</option><option>Other / not known</option></select>
+    </label>
+    <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 500">Invoice (optional)
+      <input type="text" value="INV-88213" style="height: 56px; border: 1px solid #7a8696; border-radius: 8px; padding: 0 12px; font-size: 17px; font-family: 'IBM Plex Mono', monospace">
+    </label>
+  </div>
+  <div style="position: absolute; left: 0; right: 0; bottom: 0; padding: 12px 20px 20px; background: #ffffff; box-shadow: 0 -2px 12px #0f172a14; display: flex; flex-direction: column; gap: 8px">
+    <a href="#BindDone" style="display: flex; align-items: center; justify-content: center; height: 56px; background: #1d4ed8; color: #ffffff; border-radius: 12px; font-size: 17px; font-weight: 600; text-decoration: none">Bind 24 passports to TRK-0418</a>
+    <span style="font-size: 13px; text-align: center; color: #4b5565">Binding here releases them from their previous device automatically. <a href="#HubBind">Scanned a HUB instead?</a></span>
+  </div>
+</div></div></section>
+<section class="screen" id="BindDone" data-title="4.2 Bound"><div style="width: 390px; margin: 0 auto; box-shadow: 0 8px 32px -4px #0f172a33; border-radius: 16px; overflow: hidden; background: #fff"><div style="width: 390px; height: 844px; box-sizing: border-box; background: #ffffff; font-family: 'Noto Sans', system-ui, sans-serif; color: #0f172a; display: flex; flex-direction: column; position: relative; overflow: hidden">
+  <header style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; border-bottom: 1px solid #e2e6ed">
+    <div style="display: flex; flex-direction: column">
+      <span style="font-size: 14px; font-weight: 500">Adroit Agencies · Track<span style="color: #e11d2e">0</span>tic</span>
+      <span style="font-size: 13px; color: #4b5565">Ramesh K · Operator · Supplyman</span>
+    </div>
+    <a href="portal.html#Main" style="font-size: 14px">Sign out</a>
+  </header>
+  <div style="padding: 24px 20px 120px; display: flex; flex-direction: column; gap: 16px; overflow: auto">
+    <div style="background: #e6f6ef; border: 1px solid #e2e6ed; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 12px">
+      <div style="width: 56px; height: 56px; border-radius: 9999px; background: #047857; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 600">✓</div>
+      <h1 style="margin: 0; font-size: 28px; line-height: 36px; font-weight: 600">24 passports are now with TRK-0418</h1>
+      <p style="margin: 0; font-size: 17px; line-height: 26px">Bound at 14:51 at Okhla warehouse. The leg to Apollo Pharmacy, Saket has started and is being recorded.</p>
+    </div>
+    <div style="border: 1px solid #e2e6ed; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 8px">
+      <span style="font-size: 18px; font-weight: 600">What happens now</span>
+      <ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 15px; line-height: 22px">
+        <li style="display: flex; gap: 12px"><span style="width: 28px; height: 28px; flex-shrink: 0; border-radius: 9999px; background: #1d4ed8; color: #ffffff; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600">1</span><span>Keep the bag closed. Opening it away from a stop raises an alert at the office.</span></li>
+        <li style="display: flex; gap: 12px"><span style="width: 28px; height: 28px; flex-shrink: 0; border-radius: 9999px; background: #eef1f6; color: #4b5565; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600">2</span><span>At the pharmacy, scan the device QR again and tap <strong>Delivered</strong>. That scan is the handover of record.</span></li>
+        <li style="display: flex; gap: 12px"><span style="width: 28px; height: 28px; flex-shrink: 0; border-radius: 9999px; background: #eef1f6; color: #4b5565; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 600">3</span><span>If you hold the goods overnight at a stop with no HUB, keep the device with the goods. Do not unbind.</span></li>
+      </ol>
+    </div>
+    <div style="border: 1px solid #e2e6ed; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 6px; font-size: 15px">
+      <div style="display: flex; justify-content: space-between"><span style="color: #4b5565">Device</span><span class="mono">TRK-0418 · 4.6 °C</span></div>
+      <div style="display: flex; justify-content: space-between"><span style="color: #4b5565">Invoice</span><span class="mono">INV-88213</span></div>
+      <div style="display: flex; justify-content: space-between"><span style="color: #4b5565">Moved from</span><span>HUB TRK-0401 · Cold room A</span></div>
+      <div style="display: flex; justify-content: space-between"><span style="color: #4b5565">1 passport</span><span class="pill" style="background: #fef3e2; color: #92400e">moved from a partner device</span></div>
+    </div>
+    <div style="font-size: 14px; line-height: 20px; color: #4b5565">Scanned the wrong passport? <a href="#ScanBind">Scan again</a> — binding it to its correct device moves it; there is no unbind.</div>
+  </div>
+  <div style="position: absolute; left: 0; right: 0; bottom: 0; padding: 12px 20px 20px; background: #ffffff; box-shadow: 0 -2px 12px #0f172a14; display: flex; flex-direction: column; gap: 8px">
+    <a href="#DeliveryScan" style="display: flex; align-items: center; justify-content: center; height: 56px; background: #1d4ed8; color: #ffffff; border-radius: 12px; font-size: 17px; font-weight: 600; text-decoration: none">Delivered · scan at the stop</a>
+    <a href="#ScanBind" style="display: flex; align-items: center; justify-content: center; height: 56px; background: #ffffff; color: #1a43b8; border: 1px solid #7a8696; border-radius: 12px; font-size: 17px; font-weight: 600; text-decoration: none">Add more passports</a>
+  </div>
+</div></div></section>
+<section class="screen" id="PublicScan" data-title="4.3 Passport QR scanned · public"><div style="width: 390px; margin: 0 auto; box-shadow: 0 8px 32px -4px #0f172a33; border-radius: 16px; overflow: hidden; background: #fff"><div style="width: 390px; height: 844px; box-sizing: border-box; background: #ffffff; font-family: 'Noto Sans', 'Noto Sans Devanagari', system-ui, sans-serif; color: #0f172a; display: flex; flex-direction: column; position: relative; overflow: hidden">
+  <header style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; border-bottom: 1px solid #e2e6ed">
+    <span style="font-size: 18px; font-weight: 600">Track<span style="color: #e11d2e">0</span>tic<sup style="font-size: 9px; margin-left: 2px">TM</sup></span>
+    <div role="group" aria-label="Language" style="display: inline-flex; border: 1px solid #7a8696; border-radius: 9999px; overflow: hidden">
+      <a href="#PublicScan" style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none; box-sizing: border-box; height: 36px; padding: 0 14px; border: 0; background: #1d4ed8; color: #ffffff; font-size: 14px; font-weight: 600; font-family: inherit">English</a>
+      <a href="#PublicScan" style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none; box-sizing: border-box; height: 36px; padding: 0 14px; border: 0; background: #ffffff; color: #1a43b8; font-size: 14px; font-weight: 600; font-family: inherit">हिन्दी</a>
+    </div>
+  </header>
+  <div style="padding: 24px 20px 32px; display: flex; flex-direction: column; gap: 16px; overflow: auto">
+    <div style="font-size: 13px; font-weight: 500; letter-spacing: 0.02em; text-transform: uppercase; color: #4b5565">Cold-chain record · no login needed</div>
+    <div style="background: #e6f6ef; border: 1px solid #e2e6ed; border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 10px">
+      <div style="width: 56px; height: 56px; border-radius: 9999px; background: #047857; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 28px; font-weight: 600">✓</div>
+      <h1 style="margin: 0; font-size: 28px; line-height: 36px; font-weight: 600">Kept between 2 °C and 8 °C</h1>
+      <p style="margin: 0; font-size: 17px; line-height: 26px">This item travelled under temperature control through every monitored step from the maker to this point.</p>
+      <div style="display: flex; gap: 8px; flex-wrap: wrap"><span class="pill" style="background: #047857; color: #ffffff">COMPLIANT</span><span class="pill" style="background: #eef1f6; color: #4b5565">5 steps · 7 days</span></div>
+    </div>
+    <div style="display: flex; flex-direction: column; gap: 4px; font-size: 14px; line-height: 20px; color: #4b5565">
+      <div>Record <span class="mono" style="color: #0f172a">PP-AD-009811</span> · verification token <span class="mono" style="color: #0f172a">VT-3M8A-27</span></div>
+      <div>Generated 29 Oct 2026 · 14:58 · the last step may still be in progress</div>
+    </div>
+    <div style="border: 1px solid #e2e6ed; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+      <span style="font-size: 18px; font-weight: 600">Last step · delivery to the pharmacy</span>
+      <div style="height: 120px; border: 1px solid #e2e6ed; border-radius: 8px; position: relative">
+        <div style="position: absolute; left: 8px; right: 8px; top: 24px; border-top: 1px dashed #b91c1c"></div>
+        <div style="position: absolute; left: 8px; right: 8px; top: 92px; border-top: 1px dashed #1d4ed8"></div>
+        <span style="position: absolute; left: 12px; top: 50px; font-size: 13px; color: #4b5565">[graph · 2 / 8 °C lines · 3 h 10 min]</span>
+      </div>
+      <div class="mono" style="font-size: 14px; color: #4b5565">min 3.9 · max 6.2 · avg 4.8 °C</div>
+    </div>
+    <div style="border: 1px solid #e2e6ed; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+      <span style="font-size: 18px; font-weight: 600">Earlier steps · summary</span>
+      <ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 22px">
+        <li style="display: flex; justify-content: space-between; gap: 8px"><span>Storage at a distributor · 7 days</span><span class="pill" style="background: #e6f6ef; color: #047857">In range</span></li>
+        <li style="display: flex; justify-content: space-between; gap: 8px"><span>Transport to the distributor · 4 h</span><span class="pill" style="background: #e6f6ef; color: #047857">In range</span></li>
+        <li style="display: flex; justify-content: space-between; gap: 8px"><span>Storage at a depot · 3 days</span><span class="pill" style="background: #e6f6ef; color: #047857">In range</span></li>
+        <li style="display: flex; justify-content: space-between; gap: 8px"><span>Transport from the maker · 11 h</span><span class="pill" style="background: #eef1f6; color: #4b5565">Where monitored</span></li>
+      </ol>
+      <div style="font-size: 13px; line-height: 18px; color: #4b5565">Company names, places and device ids are not shown on a public record. "Where monitored" means a step had no device or missing readings — the verdict then reads COMPLIANT WHERE MONITORED.</div>
+    </div>
+    <a href="#ReportPDF" style="display: flex; align-items: center; justify-content: center; height: 56px; background: #1d4ed8; color: #ffffff; border-radius: 12px; font-size: 17px; font-weight: 600; text-decoration: none">Open the PDF report</a>
+    <div style="font-size: 13px; line-height: 18px; color: #4b5565; text-align: center">Are you the receiver with a Track0tic device? <a href="#ScanBind">Sign in to bind this item to your device</a>.</div>
+  </div>
+</div></div></section>
+<section class="screen" id="DeliveryScan" data-title="4.4 Device QR scanned at the stop · Delivered"><div style="width: 390px; margin: 0 auto; box-shadow: 0 8px 32px -4px #0f172a33; border-radius: 16px; overflow: hidden; background: #fff"><div style="width: 390px; height: 844px; box-sizing: border-box; background: #ffffff; font-family: 'Noto Sans', system-ui, sans-serif; color: #0f172a; display: flex; flex-direction: column; position: relative; overflow: hidden">
+  <header style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; border-bottom: 1px solid #e2e6ed">
+    <div style="display: flex; flex-direction: column">
+      <span style="font-size: 14px; font-weight: 500">Demo Tenant · Track<span style="color: #e11d2e">0</span>tic</span>
+      <span style="font-size: 13px; color: #4b5565">Ramesh K · Operator · Supplyman</span>
+    </div>
+    <a href="portal.html#Main" style="font-size: 14px">Sign out</a>
+  </header>
+  <div style="padding: 24px 20px 130px; display: flex; flex-direction: column; gap: 16px; overflow: auto">
+    <div style="display: flex; flex-direction: column; gap: 2px">
+      <span style="font-size: 13px; font-weight: 500; letter-spacing: 0.02em; text-transform: uppercase; color: #4b5565">Device QR scanned</span>
+      <span class="mono" style="font-size: 24px; line-height: 32px; font-weight: 600">TRK-0418</span>
+      <span style="font-size: 15px; color: #4b5565">Pro · 68% · 4.9 °C now</span>
+    </div>
+    <div style="background: #e8eefc; border: 1px solid #e2e6ed; border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 8px">
+      <span class="pill" style="background: #047857; color: #ffffff; align-self: flex-start">You are at the stop</span>
+      <h1 style="margin: 0; font-size: 28px; line-height: 36px; font-weight: 600">Apollo Pharmacy, Saket</h1>
+      <span style="font-size: 15px; color: #4b5565">GPS 40 m from the drop point · 15:32</span>
+    </div>
+    <div style="border: 1px solid #e2e6ed; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 8px; font-size: 15px">
+      <div style="display: flex; justify-content: space-between"><span style="color: #4b5565">Leg</span><span>Okhla warehouse → here</span></div>
+      <div style="display: flex; justify-content: space-between"><span style="color: #4b5565">Passport QRs</span><span>24 on this device</span></div>
+      <div style="display: flex; justify-content: space-between"><span style="color: #4b5565">Invoice</span><span class="mono">INV-88213</span></div>
+      <div style="display: flex; justify-content: space-between"><span style="color: #4b5565">Travelled</span><span class="mono">14.2 km · 41 min</span></div>
+      <div style="display: flex; justify-content: space-between"><span style="color: #4b5565">Temperature on leg</span><span class="mono" style="color: #a61b1b">excursion 14 min</span></div>
+    </div>
+    <div style="background: #fdecec; border: 1px solid #e2e6ed; border-radius: 12px; padding: 12px 16px; font-size: 14px; line-height: 20px; color: #a61b1b">! This leg had an excursion (max 9.6 °C). It stays on the record. Delivering does not hide it — tell the pharmacy.</div>
+    <fieldset style="border: 0; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px">
+      <legend style="font-size: 14px; font-weight: 500; margin-bottom: 4px">Delivering</legend>
+      <label style="display: flex; gap: 10px; align-items: center; font-size: 15px"><input type="radio" name="d" checked style="width: 20px; height: 20px">All 24 Passport QRs</label>
+      <label style="display: flex; gap: 10px; align-items: center; font-size: 15px"><input type="radio" name="d" style="width: 20px; height: 20px">Only some — scan the ones handed over</label>
+    </fieldset>
+    <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 500">Received by (optional)
+      <input type="text" placeholder="Name at the counter" style="height: 56px; border: 1px solid #7a8696; border-radius: 8px; padding: 0 12px; font-size: 17px; font-family: inherit">
+    </label>
+    <div style="font-size: 14px; line-height: 20px; color: #4b5565">Your Delivered scan is the handover of record. If the pharmacy has a Track0tic device they may also scan the Passport QRs onto it — optional, never a gate.</div>
+  </div>
+  <div style="position: absolute; left: 0; right: 0; bottom: 0; padding: 12px 20px 20px; background: #ffffff; box-shadow: 0 -2px 12px #0f172a14; display: flex; flex-direction: column; gap: 8px">
+    <a href="#BindDone" style="display: flex; align-items: center; justify-content: center; height: 56px; background: #1d4ed8; color: #ffffff; border-radius: 12px; font-size: 17px; font-weight: 600; text-decoration: none">Delivered · 24 Passport QRs</a>
+    <a href="#ScanBind" style="display: flex; align-items: center; justify-content: center; height: 56px; background: #ffffff; color: #1a43b8; border: 1px solid #7a8696; border-radius: 12px; font-size: 17px; font-weight: 600; text-decoration: none">Not delivering here · keep the leg open</a>
+  </div>
+</div></div></section>
+<section class="screen" id="HubBind" data-title="4.5 HUB QR scanned · storage"><div style="width: 390px; margin: 0 auto; box-shadow: 0 8px 32px -4px #0f172a33; border-radius: 16px; overflow: hidden; background: #fff"><div style="width: 390px; height: 844px; box-sizing: border-box; background: #ffffff; font-family: 'Noto Sans', system-ui, sans-serif; color: #0f172a; display: flex; flex-direction: column; position: relative; overflow: hidden">
+  <header style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; border-bottom: 1px solid #e2e6ed">
+    <div style="display: flex; flex-direction: column">
+      <span style="font-size: 14px; font-weight: 500">Demo Tenant · Track<span style="color: #e11d2e">0</span>tic</span>
+      <span style="font-size: 13px; color: #4b5565">Priya S · Operator · Warehouse</span>
+    </div>
+    <a href="portal.html#Main" style="font-size: 14px">Sign out</a>
+  </header>
+  <div style="padding: 24px 20px 130px; display: flex; flex-direction: column; gap: 16px; overflow: auto">
+    <div style="display: flex; flex-direction: column; gap: 2px">
+      <span style="font-size: 13px; font-weight: 500; letter-spacing: 0.02em; text-transform: uppercase; color: #4b5565">Device QR scanned · HUB</span>
+      <span class="mono" style="font-size: 24px; line-height: 32px; font-weight: 600">TRK-0401</span>
+      <span style="font-size: 15px; color: #4b5565">Cold room A · 4.2 °C · 60% RH · door shut · 2,310 Passport QRs stored</span>
+    </div>
+    <h1 style="margin: 0; font-size: 28px; line-height: 36px; font-weight: 600">Put stock into Cold room A</h1>
+    <p style="margin: 0; font-size: 17px; line-height: 26px; color: #4b5565">Same scan, same rule: whatever you scan now is bound to this HUB and its storage leg starts. Taking stock out later is just scanning it onto a Pro or Lite.</p>
+    <div style="background: #0b1220; color: #ffffff; border-radius: 16px; height: 160px; position: relative; display: flex; align-items: center; justify-content: center">
+      <div style="width: 120px; height: 120px; border: 2px solid #ffffff; border-radius: 16px; opacity: 0.9"></div>
+      <span style="position: absolute; bottom: 12px; font-size: 13px; color: #ffffff">Camera · scan the Passport QRs going in</span>
+    </div>
+    <div style="display: flex; justify-content: space-between; align-items: baseline">
+      <span style="font-size: 18px; font-weight: 600">Scanned · 120</span>
+      <a href="#HubBind" style="display: inline-flex; align-items: center; justify-content: center; text-decoration: none; box-sizing: border-box; background: none; border: 0; padding: 0; color: #1a43b8; text-decoration: underline; font-size: 14px; font-family: inherit">Type a range</a>
+    </div>
+    <ul style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px">
+      <li style="display: flex; justify-content: space-between; align-items: center; padding: 10px 12px; border: 1px solid #e2e6ed; border-radius: 12px"><span class="mono" style="font-size: 15px">PP-SP-440019</span><span class="pill" style="background: #eef1f6; color: #4b5565">received from a partner leg</span></li>
+      <li style="display: flex; justify-content: space-between; align-items: center; padding: 10px 12px; border: 1px solid #e2e6ed; border-radius: 12px"><span class="mono" style="font-size: 15px">PP-SP-440020</span><span class="pill" style="background: #eef1f6; color: #4b5565">received from a partner leg</span></li>
+      <li style="display: flex; justify-content: space-between; align-items: center; padding: 10px 12px; border: 1px solid #e2e6ed; border-radius: 12px; background: #fef3e2"><span class="mono" style="font-size: 15px">PP-AD-010551</span><span class="pill" style="background: #b45309; color: #ffffff">back from TRK-0425 · returned</span></li>
+      <li style="font-size: 14px; color: #4b5565; padding: 4px 12px">+ 117 more</li>
+    </ul>
+    <label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 500">Profile for this storage
+      <select style="height: 56px; border: 1px solid #7a8696; border-radius: 8px; padding: 0 12px; font-size: 17px; font-family: inherit; background: #ffffff"><option>Cold chain 2–8 °C (HUB default)</option><option>Frozen −25 to −15 °C</option></select>
+    </label>
+  </div>
+  <div style="position: absolute; left: 0; right: 0; bottom: 0; padding: 12px 20px 20px; background: #ffffff; box-shadow: 0 -2px 12px #0f172a14; display: flex; flex-direction: column; gap: 8px">
+    <a href="#BindDone" style="display: flex; align-items: center; justify-content: center; height: 56px; background: #1d4ed8; color: #ffffff; border-radius: 12px; font-size: 17px; font-weight: 600; text-decoration: none">Bind 120 to Cold room A · storage starts</a>
+    <span style="font-size: 13px; text-align: center; color: #4b5565">The HUB sends only temperature, humidity and time; the server joins them to these Passport QRs.</span>
+  </div>
+</div></div></section>
+<section class="screen" id="ReportPDF" data-title="4.6 Compliance report PDF"><div style="width: 794px; margin: 0 auto; box-shadow: 0 8px 32px -4px #0f172a33; border-radius: 16px; overflow: hidden; background: #fff"><div style="width: 794px; min-height: 1123px; box-sizing: border-box; padding: 48px 56px; background: #ffffff; font-family: 'Noto Sans', system-ui, sans-serif; color: #0f172a; font-size: 13px; line-height: 19px; display: flex; flex-direction: column; gap: 20px">
+  <header style="display: flex; justify-content: space-between; align-items: flex-start; border-bottom: 2px solid #0f172a; padding-bottom: 12px">
+    <div style="display: flex; flex-direction: column; gap: 2px">
+      <span style="font-size: 24px; font-weight: 600">Track<span style="color: #e11d2e">0</span>tic<sup style="font-size: 10px; margin-left: 2px">TM</sup></span>
+      <span style="font-size: 12px; color: #4b5565">Temperature compliance report · passport record</span>
+    </div>
+    <div style="text-align: right; display: flex; flex-direction: column; gap: 2px; font-size: 12px; color: #4b5565">
+      <span>Generated <span class="mono" style="color: #0f172a">29 Oct 2026 · 14:58</span></span>
+      <span>Verification token <span class="mono" style="color: #0f172a">VT-7K2Q-91</span></span>
+      <span>Verify at trackotic.com/verify</span>
+    </div>
+  </header>
+
+  <section style="display: flex; gap: 16px; align-items: stretch">
+    <div style="flex: 1; border: 1px solid #e2e6ed; border-radius: 8px; padding: 12px; display: flex; flex-direction: column; gap: 4px">
+      <span style="font-size: 11px; font-weight: 500; letter-spacing: 0.02em; text-transform: uppercase; color: #4b5565">Passport QR</span>
+      <span class="mono" style="font-size: 18px; font-weight: 600">PP-AD-011234</span>
+      <span>Generated by Track0tic 22 Oct 2026</span>
+      <span>Profile: Cold chain 2 – 8 °C</span>
+      <span style="color: #4b5565">v1: no product details on the record</span>
+    </div>
+    <div style="flex: 1; border: 1px solid #e2e6ed; border-radius: 8px; padding: 12px; display: flex; flex-direction: column; gap: 4px">
+      <span style="font-size: 11px; font-weight: 500; letter-spacing: 0.02em; text-transform: uppercase; color: #4b5565">Verdict · whole chain so far</span>
+      <span style="font-size: 20px; font-weight: 600; color: #a61b1b">EXCURSION</span>
+      <span>1 of 4 monitored steps out of range · last step in progress</span>
+      <div style="display: flex; height: 10px; border-radius: 9999px; overflow: hidden; margin-top: 4px"><span style="flex: 3; background: #047857"></span><span style="flex: 1; background: #b91c1c"></span></div>
+      <span style="font-size: 11px; color: #4b5565">Wording: COMPLIANT · COMPLIANT WHERE MONITORED · EXCURSION</span>
+    </div>
+  </section>
+
+  <section style="display: flex; flex-direction: column; gap: 8px">
+    <h2 style="margin: 0; font-size: 15px; font-weight: 600">Current step · transport to a pharmacy (in progress)</h2>
+    <div style="height: 200px; border: 1px solid #e2e6ed; border-radius: 8px; position: relative">
+      <div style="position: absolute; left: 10px; right: 10px; top: 30px; border-top: 1px dashed #b91c1c"></div>
+      <div style="position: absolute; left: 10px; right: 10px; top: 150px; border-top: 1px dashed #1d4ed8"></div>
+      <span class="mono" style="position: absolute; right: 14px; top: 14px; font-size: 11px; color: #a61b1b">8 °C</span>
+      <span class="mono" style="position: absolute; right: 14px; top: 134px; font-size: 11px; color: #1a43b8">2 °C</span>
+      <div style="position: absolute; left: 72%; top: 0; bottom: 0; width: 26%; background: #fdecec"></div>
+      <span style="position: absolute; left: 14px; top: 90px; font-size: 12px; color: #4b5565">[ReportLab graph · 14:51 → 14:58 · 2/8 °C lines · excursion shaded]</span>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px">
+      <div><span style="color: #4b5565">Started</span><br><span class="mono">29 Oct 14:51</span></div>
+      <div><span style="color: #4b5565">Min</span><br><span class="mono">3.8 °C</span></div>
+      <div><span style="color: #4b5565">Max</span><br><span class="mono" style="color: #a61b1b">9.6 °C</span></div>
+      <div><span style="color: #4b5565">Avg</span><br><span class="mono">5.1 °C</span></div>
+      <div><span style="color: #4b5565">Out of range</span><br><span class="mono">14 min</span></div>
+    </div>
+  </section>
+
+  <section style="display: flex; flex-direction: column; gap: 8px">
+    <h2 style="margin: 0; font-size: 15px; font-weight: 600">Earlier steps · kept in range (anonymised)</h2>
+    <table>
+      <thead><tr><th>Step</th><th>Kind</th><th>Duration</th><th>Min</th><th>Max</th><th>Avg</th><th>Readings</th><th>Result</th></tr></thead>
+      <tbody>
+        <tr><td>3</td><td>Storage at a distributor</td><td>7 d 1 h</td><td class="mono">3.4</td><td class="mono">5.2</td><td class="mono">4.2</td><td class="mono">6,742</td><td style="color: #047857; font-weight: 500">In range</td></tr>
+        <tr><td>2</td><td>Transport to the distributor</td><td>4 h 38 m</td><td class="mono">3.1</td><td class="mono">6.8</td><td class="mono">4.9</td><td class="mono">186</td><td style="color: #047857; font-weight: 500">In range</td></tr>
+        <tr><td>1</td><td>Storage and transport from the maker</td><td>4 d</td><td class="mono">2.6</td><td class="mono">7.1</td><td class="mono">4.4</td><td class="mono">3,811</td><td style="color: #047857; font-weight: 500">In range</td></tr>
+      </tbody>
+    </table>
+    <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px">
+      <div style="height: 70px; border: 1px solid #e2e6ed; border-radius: 6px; padding: 6px; font-size: 11px; color: #4b5565">[step 3 mini graph]</div>
+      <div style="height: 70px; border: 1px solid #e2e6ed; border-radius: 6px; padding: 6px; font-size: 11px; color: #4b5565">[step 2 mini graph]</div>
+      <div style="height: 70px; border: 1px solid #e2e6ed; border-radius: 6px; padding: 6px; font-size: 11px; color: #4b5565">[step 1 mini graph]</div>
+    </div>
+  </section>
+
+  <section style="display: flex; flex-direction: column; gap: 6px; font-size: 12px; color: #4b5565; border-top: 1px solid #e2e6ed; padding-top: 12px; margin-top: auto">
+    <span>Public copies show no tenant names, places or device ids. The tenant's own copy (downloaded signed in) adds custodian names, sites, device TRK ids, carrier and invoice reference.</span>
+    <span>An excursion is recorded when a reading leaves the profile range for longer than the grace period set by the custodian; it stays on the record permanently. A step without a device or with missing readings is marked "where monitored".</span>
+    <span>Track0tic™ is the issuer of this passport record. Page 1 of 1.</span>
+  </section>
+</div></div></section>
+<script>
+(function(){
+  var secs=[].slice.call(document.querySelectorAll('.screen')), pick=document.getElementById('pick'), pos=document.getElementById('pos');
+  function show(id){
+    var i=secs.findIndex(function(s){return s.id===id}); if(i<0)i=0;
+    secs.forEach(function(s,j){s.classList.toggle('on',j===i)});
+    pick.value=secs[i].id; pos.textContent=(i+1)+' / '+secs.length;
+    if(location.hash!=='#'+secs[i].id) history.replaceState(null,'','#'+secs[i].id);
+    window.scrollTo(0,0);
+  }
+  function cur(){return secs.findIndex(function(s){return s.classList.contains('on')})}
+  pick.addEventListener('change',function(){show(pick.value)});
+  document.getElementById('prev').addEventListener('click',function(){show(secs[Math.max(0,cur()-1)].id)});
+  document.getElementById('next').addEventListener('click',function(){show(secs[Math.min(secs.length-1,cur()+1)].id)});
+  window.addEventListener('hashchange',function(){show(location.hash.slice(1))});
+  document.addEventListener('click',function(e){var a=e.target.closest('a[href^="#"]'); if(a){e.preventDefault(); show(a.getAttribute('href').slice(1));}});
+  document.addEventListener('keydown',function(e){if(e.key==='ArrowRight')document.getElementById('next').click(); if(e.key==='ArrowLeft')document.getElementById('prev').click();});
+  show((location.hash||'#'+secs[0].id).slice(1));
+})();
+</script></body></html>
