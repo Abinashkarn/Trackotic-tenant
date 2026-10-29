@@ -1091,7 +1091,7 @@ html,body{margin:0;background:#dfe4ec;font-family:'Noto Sans',system-ui,sans-ser
           <h1 style="margin: 0; font-size: 22px; line-height: 28px; font-weight: 600">Okhla warehouse → Apollo Pharmacy, Saket</h1>
           <span class="pill" style="background: #b91c1c; color: #ffffff">Excursion · in progress</span>
         </div>
-        <div style="font-size: 14px; color: #4b5565">Transport leg · <span class="mono">TRK-0418</span> Pro · started 29 Oct 14:51 by Ramesh K · 24 Passport QRs · invoice <span class="mono">INV-88213</span> · profile Cold chain 2–8 °C</div>
+        <div style="font-size: 14px; color: #4b5565">Transport leg · <span class="mono">TRK-0418</span> Pro · started 29 Oct 14:51 by Ramesh K · 5 Passport QRs · 2 stops · invoices <span class="mono">INV-88213 · 88214</span> · profile Cold chain 2–8 °C</div>
       </div>
       <div style="display: flex; gap: 8px; flex-wrap: wrap">
         <a href="scan.html#ReportPDF" style="display: inline-flex; align-items: center; height: 44px; padding: 0 16px; background: #1d4ed8; color: #ffffff; border-radius: 12px; font-size: 14px; font-weight: 600; text-decoration: none">Compliance PDF (generated now)</a>
@@ -1112,10 +1112,23 @@ html,body{margin:0;background:#dfe4ec;font-family:'Noto Sans',system-ui,sans-ser
       <div style="background: #ffffff; border: 1px solid #e2e6ed; border-radius: 12px; padding: 12px 16px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 13px; color: #4b5565">KM</span><span class="mono" style="font-size: 18px; font-weight: 600">14.2 km</span></div>
       <div style="background: #ffffff; border: 1px solid #e2e6ed; border-radius: 12px; padding: 12px 16px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 13px; color: #4b5565">Time</span><span class="mono" style="font-size: 18px; font-weight: 600">0 h 41 m</span></div>
       <div style="background: #ffffff; border: 1px solid #e2e6ed; border-radius: 12px; padding: 12px 16px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 13px; color: #4b5565">Halts &gt; 10 min</span><span class="mono" style="font-size: 18px; font-weight: 600">2 · longest 14 m</span></div>
-      <div style="background: #ffffff; border: 1px solid #e2e6ed; border-radius: 12px; padding: 12px 16px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 13px; color: #4b5565">Deliveries</span><span class="mono" style="font-size: 18px; font-weight: 600">0 / 1</span></div>
+      <div style="background: #ffffff; border: 1px solid #e2e6ed; border-radius: 12px; padding: 12px 16px; display: flex; flex-direction: column; gap: 2px"><span style="font-size: 13px; color: #4b5565">Deliveries</span><span class="mono" style="font-size: 18px; font-weight: 600">1 / 2 stops · 2 / 5 QRs</span></div>
       <a href="#Reports" style="background: #e8eefc; border: 1px solid #e2e6ed; border-radius: 12px; padding: 12px 16px; display: flex; flex-direction: column; gap: 2px; text-decoration: none; color: inherit"><span style="font-size: 13px; color: #4b5565">Journey report</span><span style="font-size: 15px; font-weight: 600; color: #1a43b8">Download PDF · CSV →</span><span style="font-size: 12px; color: #4b5565">opens in Reports</span></a>
     </section>
 
+    <section style="background: #ffffff; border: 1px solid #e2e6ed; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+      <div style="display: flex; justify-content: space-between; align-items: baseline"><h2 style="margin: 0; font-size: 18px; font-weight: 600">Stops on this leg · multi-chemist route</h2><span style="font-size: 13px; color: #4b5565">one leg, one device; each Delivered scan hands over only the Passport QRs scanned at that stop</span></div>
+      <div style="overflow-x: auto">
+      <table>
+        <thead><tr><th>#</th><th>Stop</th><th>Planned</th><th>Delivered</th><th>Passport QRs</th><th>Invoice</th><th>Arrived · left</th><th>Temp at stop</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">1</td><td>Apollo Pharmacy, Saket</td><td class="mono">2</td><td class="mono">2</td><td class="mono">PP-AD-011234 · 235</td><td class="mono">INV-88213</td><td class="mono">15:32 · 15:38</td><td class="mono" style="color: #a61b1b">9.1 °C</td><td><span class="pill" style="background: #047857; color: #ffffff">Handed over 15:36</span></td></tr>
+          <tr style="background: #e8eefc"><td class="mono">2</td><td>Gupta Medicos, Lajpat Nagar</td><td class="mono">3</td><td class="mono">—</td><td class="mono">PP-AD-011236 · 237 · 238</td><td class="mono">INV-88214</td><td class="mono">—</td><td class="mono">—</td><td><span class="pill" style="background: #1d4ed8; color: #ffffff">On the way · 3 on device</span></td></tr>
+        </tbody>
+      </table>
+      </div>
+      <div style="font-size: 13px; color: #4b5565">Stops are not pre-assigned: the Operator scans what he hands over at each chemist, so a wrong QR cannot be "delivered" to the wrong stop. Each chemist's public scan shows only its own items. Leg completes when nothing is left on the device or the Operator ends it at the warehouse.</div>
+    </section>
     <section style="background: #ffffff; border: 1px solid #e2e6ed; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 12px">
       <h2 style="margin: 0; font-size: 18px; font-weight: 600">Temperature on this leg</h2>
       <div style="height: 240px; border: 1px solid #e2e6ed; border-radius: 8px; position: relative; background: #ffffff">
