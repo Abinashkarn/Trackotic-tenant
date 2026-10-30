@@ -7,6 +7,10 @@ html,body{margin:0;background:#dfe4ec;font-family:'Noto Sans',system-ui,sans-ser
 .bar .sp{flex-grow:1}.bar .n{color:#a3adbf}
 .screen{display:none}.screen.on{display:block}
 .scan .screen.on{padding:32px 16px}
+#QRFlow a{color:#1a43b8}
+#QRFlow a:hover{color:#1d4ed8}
+#QRFlow svg text{font-family:'Noto Sans',system-ui,sans-serif}
+#QRFlow svg a:hover rect{filter:brightness(1.15)}
 #ScanBind a{color:#1a43b8}
 #ScanBind a:hover{color:#1d4ed8}
 #ScanBind .mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
@@ -32,7 +36,100 @@ html,body{margin:0;background:#dfe4ec;font-family:'Noto Sans',system-ui,sans-ser
 #ReportPDF td{padding:6px 8px;border-bottom:1px solid #e2e6ed;vertical-align:top}
 #ReportPDF .mono{font-family:'IBM Plex Mono',ui-monospace,monospace}
 </style></head><body class="scan">
-<div class="bar"><b>Track<span style="color:#e11d2e">0</span>tic™ tenant portal · wireframe review</b><span class="n">·</span><select id="pick"><option value="ScanBind">4.1 Device QR scanned · bind</option><option value="BindDone">4.2 Bound</option><option value="PublicScan">4.3 Passport QR scanned · public</option><option value="DeliveryScan">4.4 Delivered · stop 1 of 2 (multi-chemist)</option><option value="HubBind">4.5 HUB QR scanned · storage</option><option value="ReportPDF">4.6 Compliance report PDF</option></select><button type="button" id="prev">‹ Prev</button><button type="button" id="next">Next ›</button><span class="sp"></span><span class="n" id="pos"></span><a href="index.html">Index</a><a href="qr-flow.html">QR flow</a><a href="portal.html">Portal</a><a href="scan.html">Phone &amp; PDF</a></div>
+<div class="bar"><b>Track<span style="color:#e11d2e">0</span>tic™ tenant portal · wireframe review</b><span class="n">·</span><select id="pick"><option value="QRFlow">4.0 Flowchart · Device QR × Passport QR</option><option value="ScanBind">4.1 Device QR scanned · bind</option><option value="BindDone">4.2 Bound</option><option value="PublicScan">4.3 Passport QR scanned · public</option><option value="DeliveryScan">4.4 Delivered · stop 1 of 2 (multi-chemist)</option><option value="HubBind">4.5 HUB QR scanned · storage</option><option value="ReportPDF">4.6 Compliance report PDF</option></select><button type="button" id="prev">‹ Prev</button><button type="button" id="next">Next ›</button><span class="sp"></span><span class="n" id="pos"></span><a href="index.html">Index</a><a href="qr-flow.html">QR flow</a><a href="portal.html">Portal</a><a href="scan.html">Phone &amp; PDF</a></div>
+<section class="screen" id="QRFlow" data-title="4.0 Flowchart · Device QR × Passport QR"><div style="width: 1123px; margin: 0 auto; box-shadow: 0 8px 32px -4px #0f172a33; border-radius: 16px; overflow: hidden; background: #fff"><div style="width: 1123px; height: 794px; box-sizing: border-box; background: #ffffff; font-family: 'Noto Sans', system-ui, sans-serif; color: #0f172a; display: flex; flex-direction: column">
+<div style="display: flex; justify-content: space-between; align-items: flex-end; border-bottom: 2px solid #0f172a; padding: 0 0 8px; margin: 22px 36px 0">
+  <div><h1 style="margin: 0; font-size: 18px; font-weight: 600">Track<span style="color:#e11d2e">0</span>tic™ · Device QR × Passport QR — how they interact</h1><div style="font-size: 11px; color: #4b5565">One rule: scanning a <b>device QR</b> binds Passport QRs to that device · scanning a <b>Passport QR</b> shows the record. Demo Tenant · pharma · 30 Oct 2026</div></div>
+  <div style="font-size: 11px; color: #4b5565" style="text-align:right;white-space:nowrap">Legend: <span style="display:inline-block;width:10px;height:10px;background:#1d4ed8;border-radius:2px;vertical-align:middle"></span> Operator action &nbsp; <span style="display:inline-block;width:10px;height:10px;background:#0f172a;border-radius:2px;vertical-align:middle"></span> Server/device &nbsp; <span style="display:inline-block;width:10px;height:10px;background:#047857;border-radius:2px;vertical-align:middle"></span> Record / output &nbsp; <span style="display:inline-block;width:10px;height:10px;background:#fff;border:1px solid #b91c1c;border-radius:2px;vertical-align:middle"></span> Exception</div>
+</div>
+<svg width="1123" height="700" viewBox="0 0 1123 700" style="display:block" role="img" aria-label="Flowchart of device QR and Passport QR interaction">
+  <defs>
+    <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#4b5565"/></marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1d4ed8"/></marker>
+  </defs>
+
+  <!-- lanes -->
+  <g font-size="11" font-weight="600">
+    <rect x="36" y="10" width="1051" height="118" fill="#f3f5f9" rx="6"/><text x="46" y="28" fill="#4b5565">TRACK0TIC (issuer)</text>
+    <rect x="36" y="138" width="1051" height="150" fill="#ffffff" stroke="#e2e6ed" rx="6"/><text x="46" y="156" fill="#4b5565">OPERATOR · phone (device QR scan page, mobile + OTP)</text>
+    <rect x="36" y="298" width="1051" height="118" fill="#f3f5f9" rx="6"/><text x="46" y="316" fill="#4b5565">DEVICE &amp; SERVER (telemetry every 90 s → joined to Passport QRs by binding)</text>
+    <rect x="36" y="426" width="1051" height="150" fill="#ffffff" stroke="#e2e6ed" rx="6"/><text x="46" y="444" fill="#4b5565">CHEMIST · PATIENT · PARTNER (Passport QR scan, no login)</text>
+    <rect x="36" y="586" width="1051" height="104" fill="#fdecec" rx="6"/><text x="46" y="604" fill="#a61b1b">EXCEPTIONS (handled, never block)</text>
+  </g>
+
+  <!-- TRACK0TIC lane -->
+  <g font-size="11">
+    <rect x="60" y="46" width="170" height="60" rx="8" fill="#0f172a"/><text x="145" y="66" text-anchor="middle" fill="#fff" font-weight="600">Device QR · by Track0tic</text><text x="145" y="82" text-anchor="middle" fill="#a3adbf" font-size="10">printed &amp; pasted at assembling</text><text x="145" y="96" text-anchor="middle" fill="#a3adbf" font-size="10">centre · PET label · TRK-0418</text>
+    <rect x="250" y="46" width="170" height="60" rx="8" fill="#047857"/><text x="335" y="66" text-anchor="middle" fill="#fff" font-weight="600">Device shipped to tenant</text><text x="335" y="82" text-anchor="middle" fill="#d1fae5" font-size="10">QR already on it · tenant never</text><text x="335" y="96" text-anchor="middle" fill="#d1fae5" font-size="10">prints a device QR</text>
+    <path d="M230 76 H250" stroke="#4b5565" stroke-width="1.5" marker-end="url(#a)"/>
+    <rect x="500" y="46" width="180" height="60" rx="8" fill="#0f172a"/><text x="590" y="66" text-anchor="middle" fill="#fff" font-weight="600">Passport QR batch</text><text x="590" y="82" text-anchor="middle" fill="#a3adbf" font-size="10">generated by Track0tic per tenant</text><text x="590" y="96" text-anchor="middle" fill="#a3adbf" font-size="9.5">token · PP-AD-012001 → 013000</text>
+    <a href="portal.html#Labels" style="cursor:pointer"><rect x="700" y="46" width="180" height="60" rx="8" fill="#047857"/><text x="790" y="66" text-anchor="middle" fill="#fff" font-weight="600">Tenant prints &amp; sticks</text><text x="790" y="82" text-anchor="middle" fill="#d1fae5" font-size="10">print-ready file · PDF A4 or ZPL</text><text x="790" y="96" text-anchor="middle" fill="#d1fae5" font-size="9.5">PP cryo-adhesive · one per item</text>
+    </a><path d="M680 76 H700" stroke="#4b5565" stroke-width="1.5" marker-end="url(#a)"/>
+    <text x="905" y="62" fill="#4b5565" font-size="10">Both QRs hold only a token URL.</text>
+    <text x="905" y="76" fill="#4b5565" font-size="10">Everything shown comes from the server;</text>
+    <text x="905" y="90" fill="#4b5565" font-size="10">a damaged label is a reprint of the same</text>
+    <text x="905" y="104" fill="#4b5565" font-size="10">token (device: Track0tic · Passport: tenant).</text>
+  </g>
+
+  <!-- OPERATOR lane -->
+  <g font-size="11">
+    <a href="#ScanBind" style="cursor:pointer"><rect x="60" y="176" width="150" height="88" rx="8" fill="#1d4ed8"/><text x="135" y="198" text-anchor="middle" fill="#fff" font-weight="600">① Scan device QR</text><text x="135" y="214" text-anchor="middle" fill="#dbe6fb">at warehouse</text><text x="135" y="230" text-anchor="middle" fill="#dbe6fb">sign in · mobile + OTP</text><text x="135" y="246" text-anchor="middle" fill="#dbe6fb">role = Operator</text>
+    </a><a href="#ScanBind" style="cursor:pointer"><rect x="245" y="176" width="160" height="88" rx="8" fill="#1d4ed8"/><text x="325" y="198" text-anchor="middle" fill="#fff" font-weight="600">② Scan Passport QRs</text><text x="325" y="214" text-anchor="middle" fill="#dbe6fb">1 … n, duplicates ignored</text><text x="325" y="230" text-anchor="middle" fill="#dbe6fb">optional: going to, invoice</text><text x="325" y="246" text-anchor="middle" fill="#dbe6fb">tap BIND</text>
+    </a><a href="#BindDone" style="cursor:pointer"><rect x="440" y="176" width="160" height="88" rx="8" fill="#1d4ed8"/><text x="520" y="198" text-anchor="middle" fill="#fff" font-weight="600">③ Travel · bag closed</text><text x="520" y="214" text-anchor="middle" fill="#dbe6fb">multi-chemist route OK</text><text x="520" y="230" text-anchor="middle" fill="#dbe6fb">bag open away from a stop</text><text x="520" y="246" text-anchor="middle" fill="#dbe6fb">→ alert at office</text>
+    </a><a href="#DeliveryScan" style="cursor:pointer"><rect x="635" y="176" width="170" height="88" rx="8" fill="#1d4ed8"/><text x="720" y="198" text-anchor="middle" fill="#fff" font-weight="600">④ Scan device QR at stop</text><text x="720" y="214" text-anchor="middle" fill="#dbe6fb">"You are at a stop" (GPS)</text><text x="720" y="230" text-anchor="middle" fill="#dbe6fb" font-size="10">scan only the QRs handed over</text><text x="720" y="246" text-anchor="middle" fill="#dbe6fb" font-size="10">tap DELIVERED · rest stay bound</text>
+    </a><a href="#DeliveryScan" style="cursor:pointer"><rect x="840" y="176" width="150" height="88" rx="8" fill="#1d4ed8"/><text x="915" y="198" text-anchor="middle" fill="#fff" font-weight="600">⑤ Next stop …</text><text x="915" y="214" text-anchor="middle" fill="#dbe6fb">repeat ④ per chemist</text><text x="915" y="230" text-anchor="middle" fill="#dbe6fb" font-size="10">leg ends when device is</text><text x="915" y="246" text-anchor="middle" fill="#dbe6fb" font-size="10">empty or back at warehouse</text>
+    </a><path d="M210 220 H245" stroke="#1d4ed8" stroke-width="1.5" marker-end="url(#ab)"/>
+    <path d="M405 220 H440" stroke="#1d4ed8" stroke-width="1.5" marker-end="url(#ab)"/>
+    <path d="M600 220 H635" stroke="#1d4ed8" stroke-width="1.5" marker-end="url(#ab)"/>
+    <path d="M805 220 H840" stroke="#1d4ed8" stroke-width="1.5" marker-end="url(#ab)"/>
+    <path d="M915 264 V272 H135 V264" stroke="#1d4ed8" stroke-width="1" fill="none" stroke-dasharray="4 3" marker-end="url(#ab)"/>
+    <text x="520" y="286" text-anchor="middle" fill="#1a43b8" font-size="10">HUB works the same: scan the cold-room HUB's device QR → bind = "in storage" leg · scan onto a Pro/Lite later = out of storage</text>
+  </g>
+
+  <!-- arrows from Track0tic to operator -->
+  <path d="M335 106 V150 H135 V176" stroke="#4b5565" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+  <path d="M790 106 V158 H325 V176" stroke="#4b5565" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+
+  <!-- DEVICE & SERVER lane -->
+  <g font-size="11">
+    <rect x="245" y="334" width="160" height="70" rx="8" fill="#0f172a"/><text x="325" y="356" text-anchor="middle" fill="#fff" font-weight="600">BINDING created</text><text x="325" y="372" text-anchor="middle" fill="#a3adbf" font-size="10">passport ↔ device · time · user</text><text x="325" y="388" text-anchor="middle" fill="#a3adbf" font-size="10">previous binding auto-released</text>
+    <rect x="440" y="334" width="160" height="70" rx="8" fill="#0f172a"/><text x="520" y="356" text-anchor="middle" fill="#fff" font-weight="600">TELEMETRY</text><text x="520" y="372" text-anchor="middle" fill="#a3adbf" font-size="10">temp · RH · GPS · bag · weight</text><text x="520" y="388" text-anchor="middle" fill="#a3adbf">no passport in the payload</text>
+    <rect x="635" y="334" width="170" height="70" rx="8" fill="#0f172a"/><text x="720" y="356" text-anchor="middle" fill="#fff" font-weight="600">HANDOVER of record</text><text x="720" y="372" text-anchor="middle" fill="#a3adbf" font-size="10">for the QRs scanned at that stop</text><text x="720" y="388" text-anchor="middle" fill="#a3adbf" font-size="10">leg verdict computed per item</text>
+    <a href="portal.html#JourneyDetail" style="cursor:pointer"><rect x="840" y="334" width="150" height="70" rx="8" fill="#047857"/><text x="915" y="356" text-anchor="middle" fill="#fff" font-weight="600">JOURNEY record</text><text x="915" y="372" text-anchor="middle" fill="#d1fae5">legs · stops · KM · halts</text><text x="915" y="388" text-anchor="middle" fill="#d1fae5" font-size="10">verdict per item · PDF</text>
+    </a><path d="M325 264 V334" stroke="#4b5565" stroke-width="1.5" marker-end="url(#a)"/>
+    <path d="M520 264 V334" stroke="#4b5565" stroke-width="1.5" marker-end="url(#a)"/>
+    <path d="M720 264 V334" stroke="#4b5565" stroke-width="1.5" marker-end="url(#a)"/>
+    <path d="M405 369 H440" stroke="#4b5565" stroke-width="1.5" marker-end="url(#a)"/>
+    <path d="M600 369 H635" stroke="#4b5565" stroke-width="1.5" marker-end="url(#a)"/>
+    <path d="M805 369 H840" stroke="#4b5565" stroke-width="1.5" marker-end="url(#a)"/>
+    <text x="60" y="360" fill="#4b5565" font-size="10">Server joins readings to</text><text x="60" y="374" fill="#4b5565" font-size="10">Passport QRs via bindings —</text><text x="60" y="388" fill="#4b5565" font-size="10">no firmware change needed.</text>
+  </g>
+
+  <!-- CHEMIST / PATIENT lane -->
+  <g font-size="11">
+    <rect x="245" y="462" width="160" height="96" rx="8" fill="#ffffff" stroke="#047857" stroke-width="1.5"/><text x="325" y="484" text-anchor="middle" fill="#047857" font-weight="600">Chemist with a device</text><text x="325" y="500" text-anchor="middle" fill="#4b5565" font-size="10">scans own HUB/Pro device QR</text><text x="325" y="516" text-anchor="middle" fill="#4b5565">→ binds received items</text><text x="325" y="532" text-anchor="middle" fill="#4b5565">(optional, never a gate)</text><text x="325" y="548" text-anchor="middle" fill="#4b5565">their leg starts</text>
+    <rect x="440" y="462" width="160" height="96" rx="8" fill="#ffffff" stroke="#047857" stroke-width="1.5"/><text x="520" y="484" text-anchor="middle" fill="#047857" font-weight="600">Chemist without a device</text><text x="520" y="500" text-anchor="middle" fill="#4b5565">does nothing</text><text x="520" y="516" text-anchor="middle" fill="#4b5565" font-size="10">Operator's Delivered scan is</text><text x="520" y="532" text-anchor="middle" fill="#4b5565" font-size="10">the record; next step shows</text><text x="520" y="548" text-anchor="middle" fill="#4b5565">"where monitored"</text>
+    <a href="#PublicScan" style="cursor:pointer"><rect x="635" y="462" width="170" height="96" rx="8" fill="#047857"/><text x="720" y="484" text-anchor="middle" fill="#fff" font-weight="600">⑥ Patient scans Passport QR</text><text x="720" y="500" text-anchor="middle" fill="#d1fae5">phone camera · no login</text><text x="720" y="516" text-anchor="middle" fill="#d1fae5">English / हिन्दी</text><text x="720" y="532" text-anchor="middle" fill="#d1fae5">whole chain, anonymised</text><text x="720" y="548" text-anchor="middle" fill="#d1fae5" font-size="10">no tenant names · no TRK ids</text>
+    </a><a href="#ReportPDF" style="cursor:pointer"><rect x="840" y="462" width="150" height="96" rx="8" fill="#047857"/><text x="915" y="484" text-anchor="middle" fill="#fff" font-weight="600">⑦ Compliance PDF</text><text x="915" y="500" text-anchor="middle" fill="#d1fae5">last leg graph + earlier</text><text x="915" y="516" text-anchor="middle" fill="#d1fae5">legs as summaries</text><text x="915" y="532" text-anchor="middle" fill="#d1fae5">verification token</text><text x="915" y="548" text-anchor="middle" fill="#d1fae5">generation time shown</text>
+    </a><path d="M720 404 V462" stroke="#4b5565" stroke-width="1.5" marker-end="url(#a)"/>
+    <path d="M720 404 V433 H325 V462" stroke="#4b5565" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+    <path d="M720 433 H520 V462" stroke="#4b5565" stroke-width="1.5" fill="none" marker-end="url(#a)"/>
+    <path d="M915 404 V462" stroke="#4b5565" stroke-width="1.5" marker-end="url(#a)"/>
+    <path d="M805 510 H840" stroke="#4b5565" stroke-width="1.5" marker-end="url(#a)"/>
+    <text x="60" y="500" fill="#4b5565" font-size="10">A Passport QR never changes</text><text x="60" y="514" fill="#4b5565" font-size="10">and never closes: whoever</text><text x="60" y="528" fill="#4b5565" font-size="10">receives it just binds it to</text><text x="60" y="542" fill="#4b5565" font-size="10">their own device QR.</text>
+  </g>
+
+  <!-- EXCEPTIONS lane -->
+  <g font-size="9.5">
+    <rect x="60" y="616" width="190" height="60" rx="8" fill="#fff" stroke="#b91c1c"/><text x="155" y="636" text-anchor="middle" fill="#a61b1b" font-weight="600">Passport QR already bound elsewhere</text><text x="155" y="652" text-anchor="middle" fill="#0f172a">bind anyway → previous binding released,</text><text x="155" y="666" text-anchor="middle" fill="#0f172a">previous custodian shown on the row</text>
+    <rect x="270" y="616" width="190" height="60" rx="8" fill="#fff" stroke="#b91c1c"/><text x="365" y="636" text-anchor="middle" fill="#a61b1b" font-weight="600">Wrong QR scanned</text><text x="365" y="652" text-anchor="middle" fill="#0f172a">no unbind: scan it onto its correct</text><text x="365" y="666" text-anchor="middle" fill="#0f172a">device and it moves</text>
+    <rect x="480" y="616" width="190" height="60" rx="8" fill="#fff" stroke="#b91c1c"/><text x="575" y="636" text-anchor="middle" fill="#a61b1b" font-weight="600">Excursion on the leg</text><text x="575" y="652" text-anchor="middle" fill="#0f172a">stays on every item's record and PDF;</text><text x="575" y="666" text-anchor="middle" fill="#0f172a">Delivered does not hide it</text>
+    <rect x="690" y="616" width="190" height="60" rx="8" fill="#fff" stroke="#b91c1c"/><text x="785" y="636" text-anchor="middle" fill="#a61b1b" font-weight="600">Held overnight at a stop</text><text x="785" y="652" text-anchor="middle" fill="#0f172a">stop has HUB → bind to it;</text><text x="785" y="666" text-anchor="middle" fill="#0f172a">no HUB → Pro stays with the goods</text>
+    <rect x="900" y="616" width="187" height="60" rx="8" fill="#fff" stroke="#b91c1c"/><text x="993" y="636" text-anchor="middle" fill="#a61b1b" font-weight="600">Label damaged · phone offline</text><text x="993" y="652" text-anchor="middle" fill="#0f172a">reprint same token (logged) ·</text><text x="993" y="666" text-anchor="middle" fill="#0f172a">type the id instead of scanning</text>
+  </g>
+</svg>
+<div style="margin: -6px 36px 0; font-size: 11px; color: #4b5565">Click any numbered step to open its phone screen · green boxes open the portal page · Play mode</div>
+</div></div></section>
 <section class="screen" id="ScanBind" data-title="4.1 Device QR scanned · bind"><div style="width: 390px; margin: 0 auto; box-shadow: 0 8px 32px -4px #0f172a33; border-radius: 16px; overflow: hidden; background: #fff"><div style="width: 390px; height: 844px; box-sizing: border-box; background: #ffffff; font-family: 'Noto Sans', system-ui, sans-serif; color: #0f172a; display: flex; flex-direction: column; position: relative; overflow: hidden">
   <header style="display: flex; justify-content: space-between; align-items: center; padding: 16px 20px; border-bottom: 1px solid #e2e6ed">
     <div style="display: flex; flex-direction: column">
